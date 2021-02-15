@@ -21,16 +21,17 @@ void main(void)
 
 	Printf_test();
 
-	i = 100;
-	while(i--)
-	{
-		uint8_t ch = Hal_uart_get_char();
-		Hal_uart_put_char(ch);
-	}
+	// i = 100;
+	// while(i--)
+	// {
+	// 	uint8_t ch = Hal_uart_get_char();
+	// 	Hal_uart_put_char(ch);
+	// }
 }
 
 static void Hw_init(void)
 {
+	Hal_interrupt_init();
 	Hal_uart_init();
 }
 
