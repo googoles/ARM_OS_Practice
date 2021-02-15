@@ -23,4 +23,16 @@ Day2.
 4. Get into main.c
 
 Day3. UART(Universal Asynchronous Receiver/Transmitter)
-1. 
+
+1. I/O of Uart
+2. Create printf function
+
+Day4. Interrupt
+
+1. Create Interrupt controller
+2. Connected UART input to Interrupt
+3. Connected IRQ exception vector
+
+Day5. Timer
+
+1. In progress 
