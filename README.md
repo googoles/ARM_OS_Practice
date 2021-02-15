@@ -25,7 +25,7 @@ Day2.
 Day3. UART(Universal Asynchronous Receiver/Transmitter)
 
 1. I/O of Uart
-2. Create printf function
+2. Create printf() function
 
 Day4. Interrupt
 
@@ -35,4 +35,9 @@ Day4. Interrupt
 
 Day5. Timer
 
-1. In progress 
+1. Create delay()
+2. Timer hardware reset
+
+Day6. Task
+
+In Progress... 

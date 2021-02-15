@@ -24,10 +24,10 @@ C_SRCS += $(notdir $(wildcard lib/*.c))
 C_OBJS = $(patsubst %.c, build/%.o, $(C_SRCS))
 
 
-INC_DIRS = -I include			\
-		-I hal			\
-		-I hal/$(TARGET)	\
-		-I lib
+INC_DIRS  = -I include 			\
+            -I hal	   			\
+            -I hal/$(TARGET)	\
+            -I lib				\
 
 CFLAGS = -c -g -std=c11 -mthumb-interwork
 
@@ -53,7 +53,7 @@ gdb:
 	arm-none-eabi-gdb
 
 kill:
-	kill -9 'ps aux | grep 'QEMU' | awk 'NR==1{print $$2}''
+	kill -9 'ps aux | grep 'qemu' | awk 'NR==1{print $$2}''
 
 $(yunsoo): $(ASM_OBJS) $(C_OBJS) $(LINKER_SCRIPT)
 	$(LD) -n -T $(LINKER_SCRIPT) -o $(yunsoo) $(ASM_OBJS) $(C_OBJS) -Wl,-Map=$(MAP_FILE) $(LDFLAGS)
